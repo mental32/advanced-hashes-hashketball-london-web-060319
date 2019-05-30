@@ -1,78 +1,31 @@
-# * The top level of the hash has two keys: `:home`, for the home team, and `:away`, for the away team.
-# * The values of the `:home` and `:away` keys are hashes. These hashes have the following keys:
-#   * `:team_name`
-#   * `:colors`
-#   * `:players`
-# * The `:team_name` key points to a string of the team name.
-# * The `:colors` key points to an array of strings that are that team's colors.
-# * The `:players` key points to a hash of players whose names (as strings) are the keys to a hash containing their stats. The values for each player's names and their stats can be found in the table below. The stats keys should be formatted like this:
-#     * `:number`
-#     * `:shoe`
-#     * `:points`
-#     * `:rebounds`
-#     * `:assists`
-#     * `:steals`
-#     * `:blocks`
-#     * `:slam_dunks`
+PLAYER_STAT_DATA = [:number, :shoe, :points, :rebounds, :assists, :steals, :blocks, :slam_dunks]
 
-# Home Team:
-
-# * team name: Brooklyn Nets
-# * colors: Black, White
-# * players:
-
-
-# |          Stat          | Info | Info |  Info | Info | Info   |
-# |:------------------:|:-------------:|:------------:|:------------:|:-------------:|:-------------:|
-# | **Player Name**    |  Alan Anderson| Reggie Evans | Brook Lopez  | Mason Plumlee | Jason Terry   |
-# | **Number**         | 0             | 30           | 11           | 1             | 31            |
-# | **Shoe**           | 16            | 14           | 17           | 19            | 15            |
-# | **Points**         | 22            | 12           | 17           | 26            | 19            |
-# | **Rebounds**       | 12            | 12           | 19           | 12            | 2             |
-# | **Assists**        | 12            | 12           | 10           | 6             | 2             |
-# | **Steals**         | 3             | 12           | 3            | 3             | 4             |
-# | **Blocks**         | 1             | 12           | 1            | 8             | 11            |
-# | **Slam Dunks**     | 1             | 7            | 15           | 5             | 1             |
-
-
-# Away Team:
-
-# * team name: Charlotte Hornets
-# * colors: Turquoise, Purple
-# * players:
-
-# |        Stat       |     Info          |         Info     |              Info |         Info     |         Info      |               
-# |:------------------:|:-----------------:|:-----------------:|:-----------------:|:---------------:|:-----------------:|
-# | **Player Name**  | Jeff Adrien     | Bismack Biyombo    | DeSagna Diop      | Ben Gordon      | Brendan Haywood   |
-# | **Number**         | 4                 | 0                 | 2                 | 8               | 33                |
-# | **Shoe**           | 18                | 16                | 14                | 15              | 15                |
-# | **Points**         | 10                | 12                | 24                | 33              | 6                 |
-# | **Rebounds**       | 1                 | 4                 | 12                | 3               | 12                |
-# | **Assists**        | 1                 | 7                 | 12                | 2               | 12                |
-# | **Steals**         | 2                 | 7                 | 4                 | 1               | 22                |
-# | **Blocks**         | 7                 | 15                | 5                 | 1               | 5                 |
-# | **Slam Dunks**     | 2                 | 10                | 5                 | 0               | 12                |
+def stats(*data)
+  Hash[ *data.map.each_with_index { |value, index| [ PLAYER_STAT_DATA[index], value ] }.flatten ]
+end
 
 TEAM = {
   home: {
     team_name: 'Brooklyn Nets',
     colors: ['Black', 'White'],
     players: {
-      'Jeff Adrien' => {number: 4, 'shoe' => 18, 'points' => 10, 'rebounds' => 1, 'assists' => 1, 'steals' => 2, 'blocks' => 7},
-      'Bismack Biyombo' => {},
-      'DeSanga Diop' => {},
-      'Ben Gordon' => {},
-      'Brendan Haywood' => {}
+      'Alan Anderson' => stats(0, 16, 22, 12, 12, 3, 1, 1),
+      'Reggie Evans' => stats(30, 14, 12, 12, 12, 12, 12, 7),
+      'Brook Lopez' => stats(11, 17, 17, 19, 10, 3, 1, 15),
+      'Mason Plumlee' => stats(1, 19, 26, 12, 6, 3, 8, 5),
+      'Jason Terry' => stats(31, 15, 19, 2, 2, 4, 11, 1)
     }
   },
 
   away: {
     team_name: 'Charlotte Hornets',
     colors: ['Turquoise', 'Purple'],
-    players: []
+    players: {
+      'Jeff Adrien' => stats(4, 18, 10, 1, 1, 2, 7, 2),
+      'Bismack Biyombo' => stats(0, 16, 12, 4, 7, 7, 15, 10),
+      'DeSanga Diop' => stats(2, 14, 24, 12, 12, 4, 5, 5),
+      'Ben Gordon' => stats(8, 15, 33, 3, 2, 1, 1, 0),
+      'Brendan Haywood' => stats(33, 15, 6, 12, 12, 22, 5, 12)
+    }
   }
 }
-
-
-def game_hash
-end
