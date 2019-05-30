@@ -55,7 +55,7 @@ end
 # * Build a method, `team_colors`, that takes in an argument of the team name and returns an array of that teams colors.
 
 def team_colors(name)
-  TEAM.find { |team| team[:team_name] == name }[:colors]
+  TEAMS.find { |team| team[:team_name] == name }[:colors]
 end
 
 # * Build a method, `team_names`, that operates on the game hash to return an array of the team names.
