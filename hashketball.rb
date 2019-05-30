@@ -15,10 +15,6 @@
 #     * `:blocks`
 #     * `:slam_dunks`
 
-
-
-# Use the following data to populate your `game_hash` as outlined above. Remember to run `learn` to see what the tests expect.
-
 # Home Team:
 
 # * team name: Brooklyn Nets
@@ -57,6 +53,25 @@
 # | **Blocks**         | 7                 | 15                | 5                 | 1               | 5                 |
 # | **Slam Dunks**     | 2                 | 10                | 5                 | 0               | 12                |
 
+TEAM = {
+  home: {
+    team_name: 'Brooklyn Nets',
+    colors: ['Black', 'White'],
+    players: {
+      'Jeff Adrien' => {},
+      'Bismack Biyombo' => {},
+      'DeSanga Diop' => {},
+      'Ben Gordon' => {},
+      'Brendan Haywood' => {}
+    }
+  },
+
+  away: {
+    team_name: 'Charlotte Hornets',
+    colors: ['Turquoise', 'Purple'],
+    players: []
+  }
+}
 
 
 def game_hash
