@@ -58,7 +58,7 @@ TEAM = {
     team_name: 'Brooklyn Nets',
     colors: ['Black', 'White'],
     players: {
-      'Jeff Adrien' => {},
+      'Jeff Adrien' => {'number' => 4, 'shoe' => 18, 'points' => 10, 'rebounds' => 1, 'assists' => 1, 'steals' => 2, 'blocks' => 7},
       'Bismack Biyombo' => {},
       'DeSanga Diop' => {},
       'Ben Gordon' => {},
