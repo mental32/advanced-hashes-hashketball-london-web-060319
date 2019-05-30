@@ -67,7 +67,7 @@ end
 # * Build a method, `player_numbers`, that takes in an argument of a team name and returns an array of the jersey number's for that team.
 
 def player_numbers(name)
-  TEAM.find { |team| team[:team_name] == name }[:players].values.collect { |values| values[:number] }
+  TEAMS.find { |team| team[:team_name] == name }[:players].values.collect { |values| values[:number] }
 end
 
 # * Build a method, `player_stats`, that takes in an argument of a player's name and returns a hash of that player's stats.
