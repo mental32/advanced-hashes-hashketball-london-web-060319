@@ -32,7 +32,7 @@ GAME = {
 
 TEAMS = [GAME[:home], GAME[:away]]
 
-PLAYERS = Hash[ *TEAMS.map { |team| team[:players] }.flatten(1) ]
+PLAYERS = Hash[ *TEAMS.map { |team| team[:players] }.flatten ]
 
 def game_hash
   GAME
