@@ -105,7 +105,7 @@ def big_shoe_rebounds
 
     if largest == nil
       largest = player
-    elsif shoe[:shoe] > largest
+    elsif shoe > largest[:shoe]
       largest = player
     end
   end
