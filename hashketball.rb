@@ -89,9 +89,9 @@ def player_stats(name)
   PLAYERS[name]
 end
 
-# require 'pp'
+require 'pp'
 
-# pp PLAYERS.keys
+pp PLAYERS.keys
 
 # * Build a method, `big_shoe_rebounds`, that will return the number of rebounds associated with the player that has the largest shoe size. Break this one down into steps:
 #   * First, find the player with the largest shoe size
