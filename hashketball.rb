@@ -23,7 +23,7 @@ GAME = {
     players: {
       'Jeff Adrien' => stats(4, 18, 10, 1, 1, 2, 7, 2),
       'Bismack Biyombo' => stats(0, 16, 12, 4, 7, 7, 15, 10),
-      'DeSanga Diop' => stats(2, 14, 24, 12, 12, 4, 5, 5),
+      'DeSagna Diop' => stats(2, 14, 24, 12, 12, 4, 5, 5),
       'Ben Gordon' => stats(8, 15, 33, 3, 2, 1, 1, 0),
       'Brendan Haywood' => stats(33, 15, 6, 12, 12, 22, 5, 12)
     }
