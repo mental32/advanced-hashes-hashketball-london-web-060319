@@ -93,6 +93,8 @@ require 'pp'
 
 pp PLAYERS.keys
 
+pp player_stats("Jeff Adrien")
+
 # * Build a method, `big_shoe_rebounds`, that will return the number of rebounds associated with the player that has the largest shoe size. Break this one down into steps:
 #   * First, find the player with the largest shoe size
 #   * Then, return that player's number of rebounds
