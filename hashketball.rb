@@ -30,9 +30,6 @@ GAME = {
   }
 }
 
-require 'pp'
-
-
 TEAMS = [GAME[:home], GAME[:away]]
 
 PLAYERS = TEAMS.map { |team| team[:players] }.flatten.reduce({}, :merge)
@@ -100,7 +97,7 @@ end
 def big_shoe_rebounds
   largest = nil
 
-  for player in PLAYERS do
+  for player in PLAYERS.values do
     shoe = player[:shoe]
 
     if largest == nil
