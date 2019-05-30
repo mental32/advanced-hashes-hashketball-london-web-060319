@@ -86,7 +86,7 @@ end
 #     ```
 
 def player_stats(name)
-  PLAYERS.find { |player| player == name }
+  PLAYERS[name]
 end
 
 # * Build a method, `big_shoe_rebounds`, that will return the number of rebounds associated with the player that has the largest shoe size. Break this one down into steps:
