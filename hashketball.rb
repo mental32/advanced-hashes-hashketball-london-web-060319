@@ -66,7 +66,7 @@ end
 
 # * Build a method, `player_numbers`, that takes in an argument of a team name and returns an array of the jersey number's for that team.
 
-def players_numbers(name)
+def player_numbers(name)
   TEAM.find { |team| team[:team_name] == name }[:players].values.collect { |values| values[:number] }
 end
 
